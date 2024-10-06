@@ -1,0 +1,242 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakład Fotograficzny "Zwinne Oko"</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="kontener-gorny">
+        <p id="tytul">Zakład Fotograficzny "Zwinne Oko"</p> 
+        <div class="hide" id="wyszukiwarkowy-kontener" >
+            <input type="text" class="hidden" id="szukaj" placeholder="Wyszukaj usługę">
+            <button class="hidden" id="prycisk-szukaj"  onclick="search()">Szukaj</button>
+        </div>
+        <button class="hidden" id="przycisk-admina">Administruj Systemem </button>
+        <button class="hidden" id="przycisk-konto"> Złóż Rezerwacje </button>
+        <div id="menu-rozwijane">   
+            <span   class="hidden" id="przycisk-zarzadzaj" > <a id="trip">Zarządzaj Rezerwacjami</a>
+                <div id="ukryte-napisy">
+                    <button id="przycisk-napisz" class="element"> <a class="destynacje" >Wyślij Wiadomość</a></button>
+                    <button id="przycisk-reklamacja" class="element" > <a class="destynacje" href="#">Zareklamuj Zamówienie</a></button>
+                  </div>       
+            </span>   
+            </div>
+        
+        <div id="przyciski">
+        <button id="przycisk-g">Zarejestruj się </button>
+        <div id="formularzRejestracyjny" class="hidden">
+            <form id="formularz">
+                <div id="formm"> Formularz Rejestracyjny
+                    <button type="button" class="close-button" id="close-register1">&times;</button>
+                </div>
+                <div class="form-group">
+                <label for="imie">Imię:</label>
+                <input type="text" id="imie" name="imie" required><br><br>
+            </div>
+            <div class="form-group">
+                <label for="nazwisko">Nazwisko:</label>
+                <input type="text" id="nazwisko" name="nazwisko" required><br><br>
+            </div>
+            <div class="form-group">
+                <label for="nick">Nazwa:</label>
+                <input type="text" id="nick" name="nick" required><br><br>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+            </div>
+            <div class="form-group">
+                <label for="password">Hasło:</label>
+                <input type="password" id="password" name="password" required> <br> <br>
+            </div>
+            <div class="form-group">
+                <label for="password"> Powtórz Hasło:</label>
+                <input type="password" id="password" name="password" required> <br> <br>
+            </div>
+                <button type="submit">Zarejestruj</button>
+            </form>
+        </div>
+
+        <button id="przycisk-zal">Zaloguj</button>
+        <button id="przycisk-wyloguj" class="hidden">Wyloguj</button>
+
+        <div id="formularz-logowania" class="hidden">
+            <div class="form-header">Logowanie
+                <button type="button" class="close-button" id="close-register2">&times;</button>
+            </div>
+            <form id="formularz-logowania-form">
+                <div class="log-group">
+                    <label for="nazwa">Nazwa:</label>
+                    <input type="text" id="nazwa" name="nazwa" required>
+                </div>
+                <div class="log-group">
+                    <label for="haslo">Hasło:</label>
+                    <input type="password" id="haslo" name="haslo" required>
+                </div>
+                <button type="submit">Zaloguj</button>
+            </form>
+        </div>
+        <div id="formularz-wysylania" class="hidden">
+            <div class="form-header"> -
+                <button type="button" class="close-button" id="close-register3">&times;</button>
+            </div>
+            <form id="formularz-wysylania-form">
+                <div class="wy-group">
+                    <label for="nazwa">Użytkownik:</label>
+                    <input type="text" id="nazwa" name="nazwa" required>
+                </div>
+                <div class="wy-group">
+                    <label for="tresc">Treść Wiadomości:</label>
+                    <input type="text" id="tresc" name="tresc" required>
+                </div>
+                <button type="button" id="wysylaj">Wyślij</button>
+            </form>
+        </div>   
+        <div id="formularz-reklamacji" class="hidden">
+            <div class="form-header"> Formularz reklamacji
+                <button type="button" class="close-button" id="close-register4">&times;</button>
+            </div>
+            <form id="formularz-reklamacji-form">
+                <div class="wy-group">
+                    <label for="nazwa">Id zamówienia:</label>
+                    <input type="text" id="nazwa" name="nazwa" required>
+                </div>
+                <div class="wy-group">
+                    <label for="tresc">Powód Reklamacji:</label>
+                    <input type="text" id="tresc" name="tresc" required>
+                </div>
+                <button type="button" id="wysylaj2">Wyślij</button>
+            </form>
+         </div>
+        </div>
+        <div id="formularz-admina" class="hidden">
+            <div class="form-header"> Administracja Strony
+                <button type="button" class="close-button" id="close-register5">&times;</button>
+            </div>
+            <form id="formularz-admina-form">
+                <div class="wy-group">
+                    <button id="przycik1">Zarządzaj użytkownikami</button>
+                </div>
+                <div class="wy-group">
+                    <button id="przycik2">Zarządzaj Stroną</button>
+                </div>
+                <div class="wy-group">
+                    <button id="przycik3">Zarządzaj Bazą Danych</button>
+                </div>
+                <div class="wy-group">
+                    <button id="przycik3">Generuj Raporty</button>
+                </div>
+            </form>
+         </div>
+        
+        </div>
+        <div class="hidden" id="zamowienie-pokaz">
+         
+        <div class="kontener-uslug">
+            <div class="form-header2"> Wybierz Usługi
+                <button type="button" class="close-button" id="close-register7">&times;</button>
+            </div>
+            <form id="service-form">
+               
+                <div id="services">
+                    <div class="service">
+                        <select name="service" class="service-select">
+                            <option value="usluga1" data-price="2000">Fotografia Ślubna/Rodzinna - 2000 zł</option>
+                            <option value="usluga2" data-price="400">Fotografia Portretowa - 400 zł</option>
+                            <option value="usluga3" data-price="2500">Fotografia Komercyjna - 2500 zł</option>
+                        </select>
+                        <span class="price">0 zł</span>
+                    </div>
+                </div>
+                <button type="button" id="add-service">Dodaj Usługę</button>
+                <div class="total">
+                    Łączny koszt: <span id="total-cost">0 zł</span>
+                    <button type="button" id="przycik1">Złóż Rezerwacje</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div id="opis-glowny" >
+        <p id="z-pasji" > Z Pasji do Fotografii </p> 
+        <p id="slowa">Portrety, Fotografie Plenerowe i wiele więcej...</p>
+    </div> 
+    
+    <div id="kontener-glowny">
+     <div id="odizolowane">
+       
+        <p id="tekst2"> Nasze Usługi: </p> <br><br>
+        <div id="kontener-usluga">
+            <div id="usluga1"> 
+                <h2  id="u1" class="hx">Fotografia Ślubna</h2>
+                <p >Tworzymy wyjątkowe wspomnienia z Waszego wielkiego dnia. Od przygotowań, przez ceremonię, aż po wesele - jesteśmy z Wami, aby uchwycić każdy magiczny moment. Nasza oferta ślubna obejmuje:</p>
+                <ul id="usluga-wy1">
+                    <li>Przygotowania: Zdjęcia z przygotowań panny młodej i pana młodego, uchwycenie emocji i detali.</li>
+                    <li>Ceremonia: Fotoreportaż z ceremonii ślubnej, dokumentowanie przysięgi, wymiany obrączek i pierwszego pocałunku.</li>
+                    <li>Sesja plenerowa: Kreatywne zdjęcia w plenerze, które podkreślą Waszą miłość i wyjątkowość tego dnia.</li>
+                    <li>Przyjęcie weselne: Uchwycenie najważniejszych momentów wesela, takich jak pierwszy taniec, toasty, zabawy i emocje gości.</li>
+                </ul> 
+            </div>
+            <div id="usluga2"> 
+                <h2 id="u2" class="hx">Fotografia Portretowa</h2>
+                <p>Nasze portrety to coś więcej niż zwykłe zdjęcia. Dzięki naszemu doświadczeniu i umiejętnościom, każda sesja portretowa staje się wyjątkowym przeżyciem, a rezultaty - niezapomnianą pamiątką. Oferujemy:</p>
+                <ul id="usluga-wy2">
+                    <li>Portrety indywidualne: Zdjęcia, które podkreślą Twoją osobowość i charakter.</li>
+                    <li>Portrety biznesowe: Profesjonalne zdjęcia na potrzeby CV, LinkedIn oraz innych mediów społecznościowych.</li>
+                    <li>Sesje artystyczne: Kreatywne i nietuzinkowe sesje, które wyrażają Twoją pasję i zainteresowania.</li>
+                </ul>
+            </div>
+            <div id="usluga3">
+                <h2  id="u3" class="hx" >Fotografia Rodzinna</h2>
+        <p>Rodzina jest najważniejsza. Pomagamy zatrzymać te cenne chwile na zawsze. Oferujemy sesje rodzinne, które są pełne radości, spontaniczności i naturalnych emocji. W naszej ofercie znajdziesz:</p>
+        <ul id="usluga-wy3">
+            <li>Sesje noworodkowe: Delikatne i pełne ciepła zdjęcia noworodków i ich rodziców.</li>
+            <li>Sesje dziecięce: Zabawy i uśmiechy najmłodszych członków rodziny, uchwycone w naturalny sposób.</li>
+            <li>Sesje rodzinne: Zdjęcia całej rodziny, które będą piękną pamiątką na lata.</li>
+            <li>Sesje ciążowe: Niezapomniane chwile oczekiwania na nowego członka rodziny.</li>
+        </ul>
+     </div>
+     <div id="usluga4" >
+        <h2 id="u4" class="hx">Fotografia Komercyjna</h2>
+        <p>Potrzebujesz profesjonalnych zdjęć do swojego biznesu? Oferujemy usługi fotograficzne dla firm, w tym zdjęcia produktów, wnętrz oraz sesje wizerunkowe. Nasza oferta komercyjna obejmuje:</p>
+        <ul id="usluga-wy4">
+            <li>Fotografia produktowa: Zdjęcia produktów na potrzeby katalogów, sklepów internetowych i materiałów reklamowych.</li>
+            <li>Fotografia wnętrz: Profesjonalne zdjęcia wnętrz, które podkreślą walory Twojej nieruchomości czy lokalu usługowego.</li>
+            <li>Sesje wizerunkowe: Zdjęcia pracowników i zarządu firmy, które będą świetnym uzupełnieniem strony internetowej i materiałów marketingowych.</li>
+            <li>Eventy biznesowe: Dokumentacja ważnych wydarzeń firmowych, takich jak konferencje, szkolenia, jubileusze i imprezy integracyjne.</li>
+        </ul>
+         </div>
+        </div>
+        <br><br><br>
+        <!--
+        <p id="tekst2" > Nasze Zdjecia: </p> <br><br>
+        <p class="zdjecia">
+            <img  class="zdjecie1" src="zdjecia/pexels-76506169-8602548.jpg" alt="fotografia">
+            <img  class="zdjecie1" src="zdjecia/pexels-aog-pixels-263452684-13952483.jpg" alt="fotografia">
+            <img  class="zdjecie1" src="zdjecia/pexels-asdrubal-luna-2210283-23285758.jpg" alt="fotografia">
+            <img  class="zdjecie1" src="zdjecia/pexels-caner-kokcu-636242728-19963046.jpg" alt="fotografia">
+            <img  class="zdjecie1" src="zdjecia/pexels-cuneyt-efe-bural-1257409288-23940965.jpg" alt="fotografia">
+            <img  class="zdjecie1" src="zdjecia/pexels-luizph-2771148.jpg" alt="fotografia">
+            <img  class="zdjecie1" src="zdjecia/pexels-rajaalemnari-20157937.jpg" alt="fotografia">
+            <img  class="zdjecie1" src="zdjecia/pexels-tolgraw-photography-445047051-23878674.jpg" alt="fotografia">
+            <img  class="zdjecie1" src="zdjecia/pexels-vlada-karpovich-8528704.jpg" alt="fotografia">
+            <img  class="zdjecie1" src="zdjecia/pexels-cuneyt-efe-bural-1257409288-23516206.jpg" alt="fotografia">
+            <img  class="zdjecie1" src="zdjecia/aaaaa.jpg" alt="fotografia">
+            <img  class="zdjecie1" src="zdjecia/adfa.jpg" alt="fotografia">
+        </p>
+        -->
+       
+     </div>
+
+    </div>
+    <a href="#top" id="do-gory">UP </a>
+    <div class="stopka">
+        <button class="przycisk-x">x</button>
+        <p>Wszelkie prawa zastrzeżone &copy; 2024 Zwinne Oko</p>
+        <p>Polityka prywatności | Regulamin | Informacja o przetwarzaniu danych osobowych</p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

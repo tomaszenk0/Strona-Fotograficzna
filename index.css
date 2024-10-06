@@ -1,0 +1,517 @@
+* {
+    padding: auto;
+    margin: auto;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+#kontener-gorny {
+    background-image: linear-gradient(to right, #6e39c3, #0071e6, #0092e1, #00abc5, #3abeaa);
+    text-align: center;
+    top: 0;
+    padding-top: 20px;
+    border-bottom: 2px solid #6E39C3;
+}
+#tytul {
+    text-align: center;
+    font-size: 29px;
+    font-weight: bold;
+}
+#kontener-glowny {
+    position: relative;
+    margin: 0 10%;
+    border-left: 15px solid #6E39C3;
+    border-right: 15px solid #F6B3FF;
+    padding: 30px;
+}
+#odizolowane {
+    
+    position: relative;
+    margin: 0 15%;
+}
+#opis-glowny {
+    background: url('fota.jpg') no-repeat center center fixed;
+    background-size: cover; 
+    display: flex;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    border-radius: 5px;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+#z-pasji
+{
+    font-size: 105px; 
+    text-align:center;
+    -webkit-text-stroke: 1px rgb(71, 71, 71);
+}
+#slowa
+{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    -webkit-text-stroke: 1px rgb(71, 71, 71);
+}
+
+#opis-glowny::first-letter {
+    font-size: 190%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#tekst2 {
+    font-size: 70px; 
+    font-weight: bold; 
+    border-bottom: 4px solid #6E39C3;
+}
+.zdjecia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
+}
+.zdjecie1 {
+    width: 350px;
+    height: 470px;
+    margin: 10px;
+    object-fit: cover;
+    border: 4px solid #6E39C3;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+.zdjecie1:hover {
+    opacity: 0.93;
+    transform: scale(1.1);
+}
+#kontener-usluga {
+    font-size: 30px;
+    margin: 0 5%;
+}
+#usluga1, #usluga2, #usluga3, #usluga4 {
+    color: white;
+    background-image: linear-gradient(to right, #6e39c3, #0071e6, #0092e1, #00abc5, #3abeaa);
+    border-radius: 50px;
+    padding: 60px;
+    margin-bottom: 20px;
+    box-shadow: 30px 30px 10px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #6E39C3;
+    border-right: 6px solid #F6B3FF;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+#usluga1 {
+    animation-delay: 1s;
+}
+#usluga2 {
+    animation-delay: 2s;
+}
+#usluga3 {
+    animation-delay: 3s;
+}
+#usluga4 {
+    animation-delay: 3.7s;
+}
+.hx {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #ffffff;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#usluga1:hover, #usluga2:hover, #usluga3:hover, #usluga4:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.192);
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.5s ease;
+}
+#do-gory {
+    position: fixed;
+    background-color: #3ABEAA;
+    bottom: 20px; 
+    right: 20px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+#do-gory:hover {
+    background-color: #6E39C3;
+}
+.stopka {
+    background-color: #33333368; 
+    color: #fff; 
+    padding: 20px; 
+    text-align: center; 
+    position: fixed; 
+    left: 0; 
+    bottom: 0; 
+    width: 100%; 
+    z-index: 3;
+    font-size: 20px;
+}
+.przycisk-x {
+    font-size: medium;
+    font-weight: bold;
+    position: fixed;
+    right: 10px;
+    top: 92%;
+    padding: 9px 12px;
+}
+.przycisk-x:hover {
+    background-color: red;
+}
+#przyciski {
+    position: relative;
+    margin-left: 80%;
+}
+.hidden {
+    display: none;
+}
+#formularzRejestracyjny {
+    position: fixed;
+    scale: 0.95;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 5px solid #6E39C3;
+    padding: 20px 90px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label,
+.form-group input {
+    display: block;
+    width: 100%;
+}
+.form-group input {
+    padding: 7px;
+    box-sizing: border-box;
+    border: 3px solid #6E39C3;
+    border-radius: 10px;
+}
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3ABEAA;
+    color: rgb(239, 239, 239);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button[type="submit"]:hover {
+    background-color: #6E39C3;
+}
+#formm {
+    background-image: linear-gradient(to right, #6e39c3, #0071e6, #0092e1, #00abc5, #3abeaa);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: -22px -92px 30px -92px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 18px;
+}
+#formularz-logowania {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 5px solid #6E39C3;
+    padding: 50px 130px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1;
+}
+.form-header {
+    background-image: linear-gradient(to right, #6e39c3, #0071e6, #0092e1, #00abc5, #3abeaa);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: -50px -130px 30px -130px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 18px;
+}
+.log-group input {
+    display: block;
+    border-radius: 18px;
+    padding: 10px;
+    margin: 10px 0 15px 0;
+}
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+#przycisk-wyloguj, 
+#przycisk-g,
+#przycisk-zal {
+    padding: 10px;
+    background-color: #3ABEAA;
+    cursor: pointer;
+}
+#przycisk-wyloguj:hover,
+#przycisk-g:hover,
+#przycisk-zal:hover {
+    background-color: #6E39C3;
+}
+#formularz-wysylania {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 5px solid #6E39C3;
+    padding: 50px 130px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1;
+}
+.wy-group input {
+    display: block;
+    border-radius: 18px;
+    padding: 12px;
+    margin-bottom: 30px;
+}
+.wy-group #tresc {
+    padding: 50px;
+}
+#wysylaj {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3ABEAA;
+    color: rgb(239, 239, 239);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#wysylaj:hover {
+    background-color: #6E39C3;
+}
+#formularz-reklamacji {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 5px solid #6E39C3;
+    padding: 50px 130px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1;
+}
+#przycisk-zarzadzaj {
+    background-color: #3ABEAA;
+    position: relative;
+    margin-right: 80%;
+    border: 3px solid #063b0d;
+    top: 28px;
+    padding: 10px 20px;
+    z-index: 2;
+}
+#wysylaj2 {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3ABEAA;
+    color: rgb(239, 239, 239);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#wysylaj2:hover {
+    background-color: #6E39C3;
+}
+#ukryte-napisy {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
+#przycisk-zarzadzaj:hover #ukryte-napisy {
+    display: block;
+    z-index: 2;
+}
+.element {
+    background-color: #3ABEAA;
+    border: 1px solid #6E39C3; 
+    padding: 10px 100px;
+    margin-left: -2px;
+}
+#ukryte-napisy a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.przycisk-zarzadzaj a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.element:hover {
+    background-color: #6E39C3;
+}
+#wyszukiwarkowy-kontener {
+    position: absolute;
+    display: flex;
+    left: 30px;
+    top: 90px;
+    z-index: 2;
+}
+#prycisk-szukaj {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #3ABEAA;
+    cursor: pointer;
+}
+#szukaj {
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+#prycisk-szukaj:hover {
+    padding: 12px;
+    background-color: #6E39C3;
+}
+.highlight {
+    background-color: #6E39C3;
+}
+#przycisk-admina {
+    background-color: #3ABEAA;
+    position: relative;
+    margin-right: 80%;
+    border: 2px solid #063b0d;
+    top: 28px;
+    padding: 10px;
+    padding-left: 20px;
+    z-index: 2;
+}
+#przycisk-admina:hover {
+    background-color: #6E39C3;
+}
+#formularz-admina {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 5px solid #6E39C3;
+    padding: 50px 130px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1;
+    width: auto;
+}
+#formularz-admina-form .wy-group {
+    padding: 10px;
+}
+#przycik1,
+#przycik2,
+#przycik3 {
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #3ABEAA;
+    transition: padding 0.3s ease, background-color 0.3s ease;
+}
+#przycik1:hover,
+#przycik2:hover,
+#przycik3:hover {
+    padding: 20px;
+    background-color: #6E39C3;
+}
+#przycisk-konto {
+    background-color: #3ABEAA;
+    position: relative;
+    margin-left: 55%;
+    
+    border: 2px solid #063b0d;
+    top: 38px;
+    padding: 10px;
+    
+    z-index: 2;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#przycisk-konto:hover {
+    background-color: #6E39C3;
+}
+
+.kontener-uslug
+{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: #ffffff;
+    padding: 70px;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+.form-header2 {
+    background-image: linear-gradient(to right, #6e39c3, #0071e6, #0092e1, #00abc5, #3abeaa);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: -70px;
+    margin-left: -70px;
+    margin-right: -70px;
+    
+    
+}
+.service {
+    
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.service-select
+{
+    border: 2px rgb(16, 77, 199) solid;
+    border-radius: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+@media (max-width: 900px) {
+    body {
+        transform: scale(0.5); /* Skaluje stronę do 50% */
+        transform-origin: top left; /* Ustawia punkt początkowy skalowania */
+        width: 200%; /* Kompensuje zmniejszenie szerokości strony */
+        height: 200%; /* Kompensuje zmniejszenie wysokości strony */
+    }
+}
